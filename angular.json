@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularDateRangePicker": {
+    "angularWebResources": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularDateRangePicker",
+            "outputPath": "dist/angularWebResources",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularDateRangePicker:build:production"
+              "browserTarget": "angularWebResources:build:production"
             },
             "development": {
-              "browserTarget": "angularDateRangePicker:build:development"
+              "browserTarget": "angularWebResources:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularDateRangePicker:build"
+            "browserTarget": "angularWebResources:build"
           }
         },
         "test": {
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "angularDateRangePicker"
+  "defaultProject": "angularWebResources"
 }
