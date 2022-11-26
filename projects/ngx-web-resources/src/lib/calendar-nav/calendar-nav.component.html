@@ -1,0 +1,53 @@
+<div class="ngx-calendar-nav-container" dir="ltr">
+  <div class="ngx-nav-header">
+    <span [attr.data-hidden]="isLabelClickable"
+          [hidden]="isLabelClickable"
+          [innerText]="label">
+    </span>
+    <button (click)="labelClicked()"
+            [attr.data-hidden]="!isLabelClickable"
+            [hidden]="!isLabelClickable"
+            [innerText]="label"
+            class="ngx-nav-header-btn"
+            type="button">
+    </button>
+  </div>
+
+  <div class="ngx-nav-btns-container">
+    <div class="ngx-calendar-nav-container-left">
+      <button (click)="leftSecondaryNavClicked()"
+              *ngIf="showLeftSecondaryNav"
+              [disabled]="leftSecondaryNavDisabled"
+              class="ngx-calendar-secondary-nav-left"
+              type="button">
+      </button>
+      <button (click)="leftNavClicked()"
+              [attr.data-hidden]="!showLeftNav"
+              [disabled]="leftNavDisabled"
+              [hidden]="!showLeftNav"
+              class="ngx-calendar-nav-left"
+              type="button">
+      </button>
+    </div>
+    <button (click)="onGoToCurrent.emit()"
+            *ngIf="showGoToCurrent"
+            class="ngx-current-location-btn"
+            type="button">
+    </button>
+    <div class="ngx-calendar-nav-container-right">
+      <button (click)="rightNavClicked()"
+              [attr.data-hidden]="!showRightNav"
+              [disabled]="rightNavDisabled"
+              [hidden]="!showRightNav"
+              class="ngx-calendar-nav-right"
+              type="button">
+      </button>
+      <button (click)="rightSecondaryNavClicked()"
+              *ngIf="showRightSecondaryNav"
+              [disabled]="rightSecondaryNavDisabled"
+              class="ngx-calendar-secondary-nav-right"
+              type="button">
+      </button>
+    </div>
+  </div>
+</div>
