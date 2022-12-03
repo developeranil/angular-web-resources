@@ -11,6 +11,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "noImplicitAny": false,
     "paths": {
       "ngx-web-resources": [
         "dist/ngx-web-resources/ngx-web-resources",
